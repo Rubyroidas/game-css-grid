@@ -1,0 +1,116 @@
+{
+  "name": "game-grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watchAll",
+    "build": "webpack --config configs/webpack.config.common.js --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rubyroidas/game-grid.git"
+  },
+  "typings": "index.d.ts",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "keywords": [
+    "game",
+    "layout"
+  ],
+  "author": "Denis Klyuev <denis.klyuev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rubyroidas/game-grid/issues"
+  },
+  "homepage": "https://github.com/Rubyroidas/game-grid#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.8.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^25.1.3",
+    "@types/node": "^13.7.4",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.11.0",
+    "eslint": "^6.8.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-compat": "^3.5.1",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ],
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-proposal-optional-chaining"
+    ]
+  },
+  "browserslist": [
+    "Android >= 50",
+    "iOS >= 10.3",
+    "Safari >= 10.1",
+    "Chrome >= 60",
+    "Edge >= 14"
+  ],
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.(js|ts)x?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "/dist/",
+      "/node_modules/"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  }
+}
